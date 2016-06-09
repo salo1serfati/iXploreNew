@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="iXploreNew" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="MvP-az-ZtT" id="J2h-nn-SAt"/>
+                <outlet property="tableView" destination="4eA-1e-WYC" id="3O2-g1-0Vy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MvP-az-ZtT">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                </mapView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4eA-1e-WYC">
+                    <rect key="frame" x="0.0" y="299" width="600" height="301"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4eA-1e-WYC" secondAttribute="bottom" id="82j-oK-a1v"/>
+                <constraint firstItem="4eA-1e-WYC" firstAttribute="top" secondItem="MvP-az-ZtT" secondAttribute="bottom" constant="-1" id="Gv5-do-njg"/>
+                <constraint firstItem="MvP-az-ZtT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IXV-rs-Fr9"/>
+                <constraint firstItem="MvP-az-ZtT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NpS-yb-03f"/>
+                <constraint firstItem="4eA-1e-WYC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PI4-q3-yRL"/>
+                <constraint firstItem="MvP-az-ZtT" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="bpf-WY-L0f"/>
+                <constraint firstAttribute="trailing" secondItem="4eA-1e-WYC" secondAttribute="trailing" id="emS-po-6oV"/>
+                <constraint firstAttribute="trailing" secondItem="MvP-az-ZtT" secondAttribute="trailing" id="gD5-Ba-jDU"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
