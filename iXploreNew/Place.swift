@@ -15,26 +15,37 @@ class Place:NSObject, MKAnnotation {
     var title: String?
     var logoURL: String?
     var ratable:Bool = true
+    var descriptionOfLabel: String?
+    let currentDate = NSDate()
+    
+    
+    
     
     class func placeList() -> [Place] {
         
         let place = Place ()
         
         place.title = "Workshop 17"
-        place.logoURL = "https://avatars1.githubusercontent.com/u/7220596?v=3&s=200"
+        place.logoURL = "https://www.eff.org/files/https-everywhere2.jpg"
         place.coordinate = CLLocationCoordinate2D(latitude: -33.906764,longitude: 18.4164983)
+        place.descriptionOfLabel = "The Place that makes you feel like you are working in Google"
+        place.currentDate
         
         let place2 = Place ()
         place2.title = "Truth Coffee"
         place2.ratable = false
         place2.logoURL = "https://robohash.org/123.png"
         place2.coordinate = CLLocationCoordinate2D(latitude: -33.9281976,longitude: 18.4227045)
+        place.descriptionOfLabel = "They say this place has got some dopy coffe"
+        place.currentDate
         
         let place3 = Place ()
         place3.title = "Chop Chop Coffee"
         place3.ratable = true
-        place3.logoURL = "http://cdn3.ixperience.co.za/assets/icons/interview-step-2-801f63110f89e85e38f27d39f5864a1399f256fe0684844caea2a18c4b6fbd33.svg"
+        place3.logoURL = "https://www.eff.org/files/https-everywhere2.jpg"
         place3.coordinate = CLLocationCoordinate2D(latitude: -33.9271879,longitude: 18.4327055)
+        place.descriptionOfLabel = "Never heard of this place in my life"
+        place.currentDate
         
         return [place, place2, place3]
     }

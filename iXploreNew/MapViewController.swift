@@ -50,13 +50,25 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         return spotList.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //Set the title of the cell
+        // Set up the cell
         let cellIdentifier = "TableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TableViewCell
         let spot = spotList[indexPath.row]
+        
+        //Set the title of the cell
         cell.labelTableCell.text = spot.title
         
-//        cell.imageTableCell.image = UIImageView.imageFromUrl(spot.logoURL)
+        //Set the image of the cell
+        cell.imageTableCell.imageFromUrl(spot.logoURL!)
+
+        //Set the date of the cell
+        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+//        let convertedDate = dateFormatter.stringFromDate(spot.currentDate)
+        dateFormatter.dateFormat = "MM/dd/YYYY HH:MM"
+        let convertedDate = dateFormatter.stringFromDate(spot.currentDate)
+        cell.dateLabel.text = convertedDate
+        
         return cell
     }
     
@@ -78,7 +90,17 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 64.5
+    }
+     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            spotList.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
+    }
 
     /*
     // MARK: - Navigation
