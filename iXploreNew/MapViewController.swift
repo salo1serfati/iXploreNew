@@ -49,6 +49,8 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return spotList.count
     }
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Set up the cell
         let cellIdentifier = "TableViewCell"
@@ -63,8 +65,6 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
         //Set the date of the cell
         let dateFormatter = NSDateFormatter()
-//        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
-//        let convertedDate = dateFormatter.stringFromDate(spot.currentDate)
         dateFormatter.dateFormat = "MM/dd/YYYY HH:MM"
         let convertedDate = dateFormatter.stringFromDate(spot.currentDate)
         cell.dateLabel.text = convertedDate
@@ -73,7 +73,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     
-    
+    //Add Pins
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // get the particular pin that was tapped
         let pinToZoomOn = spotList[indexPath.row]
@@ -93,7 +93,9 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 64.5
     }
-     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    
+    //Swipe To Delete
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             spotList.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
