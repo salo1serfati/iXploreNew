@@ -27,6 +27,7 @@
 		256B05A11D0F92FF00AE8CB6 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 256B059F1D0F92FF00AE8CB6 /* RegisterViewController.xib */; };
 		256B05C81D10378800AE8CB6 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B05C61D10378800AE8CB6 /* NewPlaceViewController.swift */; };
 		256B05C91D10378800AE8CB6 /* NewPlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 256B05C71D10378800AE8CB6 /* NewPlaceViewController.xib */; };
+		256B05CB1D104CB100AE8CB6 /* PlacesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B05CA1D104CB100AE8CB6 /* PlacesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		256B059F1D0F92FF00AE8CB6 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		256B05C61D10378800AE8CB6 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		256B05C71D10378800AE8CB6 /* NewPlaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPlaceViewController.xib; sourceTree = "<group>"; };
+		256B05CA1D104CB100AE8CB6 /* PlacesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				2546FFBC1D089A0C00CDD81E /* Place.swift */,
+				256B05CA1D104CB100AE8CB6 /* PlacesController.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				256B05941D0F889500AE8CB6 /* LandingScreenViewController.swift in Sources */,
 				2546FFC31D08AA6200CDD81E /* TableViewCell.swift in Sources */,
+				256B05CB1D104CB100AE8CB6 /* PlacesController.swift in Sources */,
 				2546FFA71D0895A500CDD81E /* ViewController.swift in Sources */,
 				256B05A01D0F92FF00AE8CB6 /* RegisterViewController.swift in Sources */,
 				2546FFBA1D08986D00CDD81E /* MapViewController.swift in Sources */,

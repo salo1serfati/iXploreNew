@@ -96,13 +96,16 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         cell.labelTableCell.text = spot.title
         
         //Set the image of the cell
-        cell.imageTableCell.imageFromUrl(spot.logoURL!)
+        cell.imageTableCell.imageFromUrl(spot.logoUrl!)
 
         //Set the date of the cell
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MM/dd/YYYY HH:MM"
         let convertedDate = dateFormatter.stringFromDate(spot.currentDate)
         cell.dateLabel.text = convertedDate
+        
+        //Set the description of the cell 
+        cell.descriptionLabel.text = spot.descriptionOfLabel
         
         return cell
     }
