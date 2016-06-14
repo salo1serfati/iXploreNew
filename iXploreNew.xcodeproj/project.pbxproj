@@ -19,6 +19,12 @@
 		2546FFC41D08AA6200CDD81E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2546FFC21D08AA6200CDD81E /* TableViewCell.xib */; };
 		256B058E1D09B08B00AE8CB6 /* blackCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 256B058D1D09B08B00AE8CB6 /* blackCircle.png */; };
 		256B05901D09B09000AE8CB6 /* Like.png in Resources */ = {isa = PBXBuildFile; fileRef = 256B058F1D09B09000AE8CB6 /* Like.png */; };
+		256B05941D0F889500AE8CB6 /* LandingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B05921D0F889500AE8CB6 /* LandingScreenViewController.swift */; };
+		256B05951D0F889500AE8CB6 /* LandingScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 256B05931D0F889500AE8CB6 /* LandingScreenViewController.xib */; };
+		256B059C1D0F88BB00AE8CB6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B059A1D0F88BB00AE8CB6 /* LoginViewController.swift */; };
+		256B059D1D0F88BB00AE8CB6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 256B059B1D0F88BB00AE8CB6 /* LoginViewController.xib */; };
+		256B05A01D0F92FF00AE8CB6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B059E1D0F92FF00AE8CB6 /* RegisterViewController.swift */; };
+		256B05A11D0F92FF00AE8CB6 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 256B059F1D0F92FF00AE8CB6 /* RegisterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		2546FFC21D08AA6200CDD81E /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		256B058D1D09B08B00AE8CB6 /* blackCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackCircle.png; path = ../../Images/blackCircle.png; sourceTree = "<group>"; };
 		256B058F1D09B09000AE8CB6 /* Like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Like.png; path = ../../Images/Like.png; sourceTree = "<group>"; };
+		256B05921D0F889500AE8CB6 /* LandingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScreenViewController.swift; sourceTree = "<group>"; };
+		256B05931D0F889500AE8CB6 /* LandingScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingScreenViewController.xib; sourceTree = "<group>"; };
+		256B059A1D0F88BB00AE8CB6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		256B059B1D0F88BB00AE8CB6 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		256B059E1D0F92FF00AE8CB6 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		256B059F1D0F92FF00AE8CB6 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 		2546FFA31D0895A500CDD81E /* iXploreNew */ = {
 			isa = PBXGroup;
 			children = (
+				256B05911D0F887D00AE8CB6 /* Onboarding */,
 				2546FFC71D08B29700CDD81E /* Images */,
 				2546FFC01D08AA2F00CDD81E /* TableViewCells */,
 				2546FFBF1D089A2100CDD81E /* Screens */,
@@ -116,6 +129,19 @@
 				256B058F1D09B09000AE8CB6 /* Like.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		256B05911D0F887D00AE8CB6 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				256B05921D0F889500AE8CB6 /* LandingScreenViewController.swift */,
+				256B05931D0F889500AE8CB6 /* LandingScreenViewController.xib */,
+				256B059A1D0F88BB00AE8CB6 /* LoginViewController.swift */,
+				256B059B1D0F88BB00AE8CB6 /* LoginViewController.xib */,
+				256B059E1D0F92FF00AE8CB6 /* RegisterViewController.swift */,
+				256B059F1D0F92FF00AE8CB6 /* RegisterViewController.xib */,
+			);
+			name = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,10 +209,13 @@
 			files = (
 				256B05901D09B09000AE8CB6 /* Like.png in Resources */,
 				256B058E1D09B08B00AE8CB6 /* blackCircle.png in Resources */,
+				256B05951D0F889500AE8CB6 /* LandingScreenViewController.xib in Resources */,
 				2546FFAF1D0895A500CDD81E /* LaunchScreen.storyboard in Resources */,
 				2546FFC41D08AA6200CDD81E /* TableViewCell.xib in Resources */,
+				256B05A11D0F92FF00AE8CB6 /* RegisterViewController.xib in Resources */,
 				2546FFBB1D08986D00CDD81E /* MapViewController.xib in Resources */,
 				2546FFAC1D0895A500CDD81E /* Assets.xcassets in Resources */,
+				256B059D1D0F88BB00AE8CB6 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,9 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				256B05941D0F889500AE8CB6 /* LandingScreenViewController.swift in Sources */,
 				2546FFC31D08AA6200CDD81E /* TableViewCell.swift in Sources */,
 				2546FFA71D0895A500CDD81E /* ViewController.swift in Sources */,
+				256B05A01D0F92FF00AE8CB6 /* RegisterViewController.swift in Sources */,
 				2546FFBA1D08986D00CDD81E /* MapViewController.swift in Sources */,
+				256B059C1D0F88BB00AE8CB6 /* LoginViewController.swift in Sources */,
 				2546FFA51D0895A500CDD81E /* AppDelegate.swift in Sources */,
 				2546FFBD1D089A0C00CDD81E /* Place.swift in Sources */,
 			);

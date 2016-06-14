@@ -17,7 +17,7 @@ class Place:NSObject, MKAnnotation {
     var ratable:Bool = true
     var descriptionOfLabel: String?
     let currentDate = NSDate()
-    
+    var favorite: Bool = false
     
     
     
@@ -30,6 +30,7 @@ class Place:NSObject, MKAnnotation {
         place.coordinate = CLLocationCoordinate2D(latitude: -33.906764,longitude: 18.4164983)
         place.descriptionOfLabel = "The Place that makes you feel like you are working in Google"
         place.currentDate
+        place.favorite = true
         
         let place2 = Place ()
         place2.title = "Truth Coffee"
@@ -46,6 +47,7 @@ class Place:NSObject, MKAnnotation {
         place3.coordinate = CLLocationCoordinate2D(latitude: -33.9271879,longitude: 18.4327055)
         place.descriptionOfLabel = "Never heard of this place in my life"
         place.currentDate
+        
         
         return [place, place2, place3]
     }

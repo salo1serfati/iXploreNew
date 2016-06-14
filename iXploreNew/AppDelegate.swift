@@ -12,6 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var authorisationNavigationController: UINavigationController?
+    var loggedInNavigationController: UINavigationController?
+    
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -19,9 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.makeKeyAndVisible()
         
-        let mvc = MapViewController()
-        let navigationController = UINavigationController(rootViewController: mvc)
-        window?.rootViewController = navigationController
+        //View Controller for when User is already Logged In
+        let mvc = MapViewController(nibName:"MapViewController",bundle:nil)
+        loggedInNavigationController = UINavigationController(rootViewController: mvc)
+        
+        //View Controller for before User has Logged In
+        let landingViewController = LandingScreenViewController(nibName:"LandingScreenViewController",bundle:nil)
+        authorisationNavigationController = UINavigationController(rootViewController:landingViewController)
+        window?.rootViewController = authorisationNavigationController
+        
         return true
     }
 

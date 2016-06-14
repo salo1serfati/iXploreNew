@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
@@ -22,10 +22,30 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         spotList = Place.placeList()
         tableView.delegate = self
         tableView.dataSource = self
+        mapView.delegate = self
         setupMap()
         
         tableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+    }
+    
+    //I dont understand How I did this. Please Review
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+       let pin = annotation as! Place
+        if !pin.favorite {
+            return nil
+        }
+        let reuseId = "pin"
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
         
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView!.canShowCallout = true
+            pinView!.animatesDrop = true
+            pinView!.pinTintColor = UIColor.yellowColor()
+        } else {
+            pinView!.annotation = annotation
+        }
+        return pinView
     }
     override func viewWillAppear(animated: Bool) {
         navigationController?.navigationBarHidden = true
@@ -80,9 +100,6 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         // optionally you can set your own boundaries of the zoom
         let span = MKCoordinateSpanMake(0.02, 0.02)
-        
-        // or use the current map zoom and just center the map
-        // let span = mapView.region.span
         
         // now move the map
         let region = MKCoordinateRegion(center: pinToZoomOn.coordinate, span: span)
