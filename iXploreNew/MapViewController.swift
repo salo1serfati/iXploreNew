@@ -26,29 +26,44 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         setupMap()
         
         tableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        
+        //Changing Navigation Bar
+        let addButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(MapViewController.addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
     }
     
-    //I dont understand How I did this. Please Review
+    override func viewWillAppear(animated: Bool) {
+        navigationController?.navigationBarHidden = false
+    }
+    func addButtonTapped() {
+        let npvc = NewPlaceViewController(nibName:"NewPlaceViewController",bundle:nil)
+        self.presentViewController(npvc, animated: true, completion: nil)
+        
+    }
+    
+
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
        let pin = annotation as! Place
-        if !pin.favorite {
-            return nil
-        }
-        let reuseId = "pin"
+
+        let reuseId = "placePin"
         var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
         
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
             pinView!.animatesDrop = true
-            pinView!.pinTintColor = UIColor.yellowColor()
         } else {
             pinView!.annotation = annotation
         }
+        
+        if !pin.favorite {
+            pinView!.pinTintColor = UIColor.redColor()
+        } else {
+            pinView!.pinTintColor = UIColor.yellowColor()
+        }
+        
         return pinView
-    }
-    override func viewWillAppear(animated: Bool) {
-        navigationController?.navigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {

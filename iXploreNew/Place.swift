@@ -37,8 +37,8 @@ class Place:NSObject, MKAnnotation {
         place2.ratable = false
         place2.logoURL = "https://robohash.org/123.png"
         place2.coordinate = CLLocationCoordinate2D(latitude: -33.9281976,longitude: 18.4227045)
-        place.descriptionOfLabel = "They say this place has got some dopy coffe"
-        place.currentDate
+        place2.descriptionOfLabel = "They say this place has got some dopy coffe"
+        place2.currentDate
         
         let place3 = Place ()
         place3.title = "Chop Chop Coffee"
@@ -46,7 +46,8 @@ class Place:NSObject, MKAnnotation {
         place3.logoURL = "https://www.eff.org/files/https-everywhere2.jpg"
         place3.coordinate = CLLocationCoordinate2D(latitude: -33.9271879,longitude: 18.4327055)
         place.descriptionOfLabel = "Never heard of this place in my life"
-        place.currentDate
+        place3.currentDate
+        place3.favorite = true
         
         
         return [place, place2, place3]

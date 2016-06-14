@@ -29,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //View Controller for before User has Logged In
         let landingViewController = LandingScreenViewController(nibName:"LandingScreenViewController",bundle:nil)
         authorisationNavigationController = UINavigationController(rootViewController:landingViewController)
-        window?.rootViewController = authorisationNavigationController
+        window?.rootViewController = loggedInNavigationController //authorisationNavigationController
+        
         
         return true
     }

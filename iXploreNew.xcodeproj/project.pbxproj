@@ -25,6 +25,8 @@
 		256B059D1D0F88BB00AE8CB6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 256B059B1D0F88BB00AE8CB6 /* LoginViewController.xib */; };
 		256B05A01D0F92FF00AE8CB6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B059E1D0F92FF00AE8CB6 /* RegisterViewController.swift */; };
 		256B05A11D0F92FF00AE8CB6 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 256B059F1D0F92FF00AE8CB6 /* RegisterViewController.xib */; };
+		256B05C81D10378800AE8CB6 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B05C61D10378800AE8CB6 /* NewPlaceViewController.swift */; };
+		256B05C91D10378800AE8CB6 /* NewPlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 256B05C71D10378800AE8CB6 /* NewPlaceViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		256B059B1D0F88BB00AE8CB6 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		256B059E1D0F92FF00AE8CB6 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		256B059F1D0F92FF00AE8CB6 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		256B05C61D10378800AE8CB6 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
+		256B05C71D10378800AE8CB6 /* NewPlaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPlaceViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			children = (
 				2546FFB81D08986D00CDD81E /* MapViewController.swift */,
 				2546FFB91D08986D00CDD81E /* MapViewController.xib */,
+				256B05C61D10378800AE8CB6 /* NewPlaceViewController.swift */,
+				256B05C71D10378800AE8CB6 /* NewPlaceViewController.xib */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 				256B05951D0F889500AE8CB6 /* LandingScreenViewController.xib in Resources */,
 				2546FFAF1D0895A500CDD81E /* LaunchScreen.storyboard in Resources */,
 				2546FFC41D08AA6200CDD81E /* TableViewCell.xib in Resources */,
+				256B05C91D10378800AE8CB6 /* NewPlaceViewController.xib in Resources */,
 				256B05A11D0F92FF00AE8CB6 /* RegisterViewController.xib in Resources */,
 				2546FFBB1D08986D00CDD81E /* MapViewController.xib in Resources */,
 				2546FFAC1D0895A500CDD81E /* Assets.xcassets in Resources */,
@@ -233,6 +240,7 @@
 				2546FFBA1D08986D00CDD81E /* MapViewController.swift in Sources */,
 				256B059C1D0F88BB00AE8CB6 /* LoginViewController.swift in Sources */,
 				2546FFA51D0895A500CDD81E /* AppDelegate.swift in Sources */,
+				256B05C81D10378800AE8CB6 /* NewPlaceViewController.swift in Sources */,
 				2546FFBD1D089A0C00CDD81E /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
